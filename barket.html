@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="wine store">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Serge Kenne">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>barket</title>
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<script defer src="js/fontawesome-all.js"></script>
+	<!-- <script defer src="/static/fontawesome/fontawesome-all.js"></script> -->
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+</head>
+<body> 
+	<div id="page-wrapper">
+		<div class="nav-mobile-header">
+			<ul class="nav-mobile clearfix">
+				<li class="nav-mobile__items nav-mobile__items--first"><span id="nav-mobile-js"><i class="fas fa-bars"></i></span>
+					<ul class="nav-mobile__sub-list">
+						<li class="nav-mobile__sub-items"><a href="index.html" class="nav-mobile__sub-link"><i class="fas fa-home nav-mobile__sub-icon"></i>home</a></li>
+						<li class="nav-mobile__sub-items"><a href="login.html" class="nav-mobile__sub-link"><i class="fas fa-user-md nav-mobile__sub-icon"></i>my account</a></li>
+						<li class="nav-mobile__sub-items"><a href="login.html" class="nav-mobile__sub-link"><i class="fas fa-star nav-mobile__sub-icon"></i>my wishlist</a></li>
+						<li class="nav-mobile__sub-items"><a href="login.html" class="nav-mobile__sub-link"><i class="fas fa-shopping-cart  nav-mobile__sub-icon"></i>my cart</a></li>
+						<li class="nav-mobile__sub-items"><a href="login.html" class="nav-mobile__sub-link"><i class="far fa-check-square nav-mobile__sub-icon"></i>Checkout</a></li>
+						<li class="nav-mobile__sub-items"><a href="login.html" class="nav-mobile__sub-link"><i class="fas fa-lock nav-mobile__sub-icon"></i>login</a></li>
+						<li class="nav-mobile__sub-items"><a href="#" class="nav-mobile__sub-link nav-mobile__sub-link--hover-white js-block-title"><i class="fab fa-gg-circle nav-mobile__sub-icon"></i>currency:<i class="fas fa-angle-down nav-mobile__sub-icon-toggle"></i></a>
+							<ul class="mobile-sub-list js-block-container clearfix">
+								<li class="mobile-sub-list__items"><a href="" class="mobile-sub-list__link">gbp</a></li>
+								<li class="mobile-sub-list__items"><a href="" class="mobile-sub-list__link">eur</a></li>
+								<li class="mobile-sub-list__items"><a href="" class="mobile-sub-list__link mobile-sub-list__link--active">usd</a></li>
+								<li class="mobile-sub-list__items"><a href="" class="mobile-sub-list__link"></a></li>
+							</ul>
+						</li>
+						<li class="nav-mobile__sub-items"><a href="#" class="nav-mobile__sub-link nav-mobile__sub-link--hover-white js-block-title"><i class="fab fa-erlang nav-mobile__sub-icon"></i>your language:<i class="fas fa-angle-down nav-mobile__sub-icon-toggle"></i></a> 
+							<ul class="mobile-sub-list js-block-container clearfix">
+								<li class="mobile-sub-list__items"><a href="" class="mobile-sub-list__link mobile-sub-list__link--active">en</a></li>
+								<li class="mobile-sub-list__items"><a href="" class="mobile-sub-list__link">de</a></li>
+								<li class="mobile-sub-list__items"><a href="" class="mobile-sub-list__link">es</a></li>
+								<li class="mobile-sub-list__items"><a href="" class="mobile-sub-list__link">ru</a></li>
+							</ul>
+						</li>
+						<li class="nav-mobile__sub-items"><a href="#" class="nav-mobile__sub-link"><i class="fas fa-info-circle nav-mobile__sub-icon"></i>about us</a></li>
+						<li class="nav-mobile__sub-items"><a href="#" class="nav-mobile__sub-link"><i class="fas fa-book nav-mobile__sub-icon"></i>customer service</a></li>
+						<li class="nav-mobile__sub-items"><a href="#" class="nav-mobile__sub-link"><i class="fas fa-edit nav-mobile__sub-icon"></i>template setting</a></li>
+						<li class="nav-mobile__sub-items"><a href="#" class="nav-mobile__sub-link"><i class="fas fa-sitemap nav-mobile__sub-icon"></i>product sitemap</a></li>
+						<li class="nav-mobile__sub-items"><a href="#" class="nav-mobile__sub-link"><i class="fas fa-sitemap nav-mobile__sub-icon"></i>categorie sitemap</a></li>
+						<li class="nav-mobile__sub-items"><a href="#" class="nav-mobile__sub-link"><i class="fas fa-search nav-mobile__sub-icon"></i>advenced search</a></li>
+						<li class="nav-mobile__sub-items"><a href="#" class="nav-mobile__sub-link"><i class="fas fa-truck nav-mobile__sub-icon"></i>orders and return</a></li>
+					</ul>
+				</li>
+				<li class="nav-mobile__items nav-mobile__items--last search-btn-js"><i class="fas fa-search"></i></li>
+				<li class="nav-mobile__items nav-mobile__items--middle shopping-cart-js"><i class="fas fa-shopping-cart"></i><span class="nav-mobile__count">0</span></li>
+				<!-- <li class="nav-mobile__items nav-mobile__items--last"><i class="fas fa-search"></i></li> -->
+			</ul>
+		</div>
+		<div class="nav-menu-search">
+			<form action="" class="search search--mobile">
+				<input class="search__text search__text--mobile" type="text">
+				<button class="search__btn search__btn--mobile" type="submit"><i class="fas fa-search search__fa-search"></i></button>
+			</form>
+		</div>
+		<div class="nav-menu-shopping-cart">
+			You have no items in your shopping cart
+		</div>
+		<div class="container-wrapper">
+			<div class="header clearfix">
+				<div class="header__line clearfix">
+					<div class="line-lang">
+						<ul class="line-lang__list clearfix">
+							<li class="line-lang__items"><span class="line-lang__sublist-toggle">$<i class="fas fa-chevron-circle-down line-lang__icon"></i></span>
+								<ul class="line-lang__sub-list line-lang__sub-list--first">
+									<li class="line-lang__sub-items"><a href="#" class="line-lang__sub-link">british pound sterling-GBP</a></li>
+									<li class="line-lang__sub-items"><a href="#" class="line-lang__sub-link">euro-eur</a></li>
+									<li class="line-lang__sub-items"><a href="#" class="line-lang__sub-link">us dollar-usd</a></li>
+								</ul>
+							</li>
+							<li class="line-lang__items"><span class="line-lang__sublist-toggle">En<i class="fas fa-chevron-circle-down line-lang__icon"></i></span>
+								<ul class="line-lang__sub-list">
+									<li class="line-lang__sub-items"><a href="#" class="line-lang__sub-link">english</a></li>
+									<li class="line-lang__sub-items"><a href="#" class="line-lang__sub-link">german</a></li>
+									<li class="line-lang__sub-items"><a href="#" class="line-lang__sub-link">spanish</a></li>
+									<li class="line-lang__sub-items"><a href="#" class="line-lang__sub-link">russian</a></li>
+								</ul>
+							</li>    
+					    </ul>		
+					</div>
+					<div class="line-in">
+						<ul class="line-in__list">
+							<li class="line-in__items">Welcome to our online store</li>
+							<li class="line-in__items"><a href="login.html" class="line-in__link">My Account</a></li>
+							<li class="line-in__items"><a href="login.html" class="line-in__link">My wishlist</a></li>
+							<li class="line-in__items"><a href="login.html" class="line-in__link">Checkout</a></li>
+							<li class="line-in__items"><a href="login.html" class="line-in__link">Log In</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__wrap-logo clearfix">
+					<div class="header__logo">
+						<a href="index.html" class="header__logo-link"><img class="header__logo-picture" src="images/logo.png" alt=""></a>
+					</div>
+					<div class="header__box clearfix">
+						<div class="header__search">
+							<form action="" class="search">
+								<input class="search__text" type="text">
+								<button class="search__btn" type="submit"><i class="fas fa-search search__fa-search"></i></button>
+							</form>
+						</div>
+						<div class="header__checked-corbage">
+							<p class="checked-corbage">
+								<i class="fas fa-shopping-cart checked-corbage__cart"></i>
+								<a href="#" class="checked-corbage__link"><span class="checked-corbage__items">0 item(s) - $0.00</span></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="header__main-menu">
+					<div class="categories-header">
+						catergories<span class="icon-toggle icon-toggle--categories"><i class="fas fa-plus-circle icon-toggle__icons-plus js-visible"></i><i class="fas fa-minus-circle icon-toggle__icons-minus"></i></span>
+					</div>
+				 	<nav class="main-menu">
+				 		<ul class="main-menu__list clearfix">
+				 			<li class="main-menu__items main-menu__items--active">
+				 				<a href="barket.html" class="main-menu__link">basket</a>
+				 			</li>
+				 			<li class="main-menu__items"><a href="barket.html" class="main-menu__link">domestic</a></li>
+				 			<li class="main-menu__items"><a href="barket.html" class="main-menu__link">futures</a></li>
+				 			<li class="main-menu__items" id="sub-list-hover"><a href="#" class="main-menu__link">imported<i class="fas fa-angle-double-down main-menu__icon"></i></a><span class="icon-toggle icon-toggle--sub-icon"><i class="fas fa-plus icon-toggle__icons-plus"></i><i class="fas fa-minus icon-toggle__icons-minus"></i></span>
+				 				<ul class="main-menu__sub-list">
+				 					<li class="main-menu__sub-items"><a href="#" class="main-menu__sub-link">red</a></li>
+				 					<li class="main-menu__sub-items"><a href="#" class="main-menu__sub-link">rose</a></li>
+				 					<li class="main-menu__sub-items"><a href="#" class="main-menu__sub-link">white</a></li>
+				 				</ul>
+				 			</li>
+				 			<li class="main-menu__items"><a href="barket.html" class="main-menu__link">kosher</a></li>
+				 			<li class="main-menu__items"><a href="barket.html" class="main-menu__link">spirit</a></li>
+				 		</ul>
+				 	</nav>
+				</div> 
+			</div>
+			<div class="main-container clearfix">
+				<div class="main-container__cell clearfix">
+					<h1 class="main-title main-title--breadcrumbs"><a href="index.html" class="main-title__home-link">Home</a><span class="main-title__product-name"><small> > </small>2009 PB CabernetSauvignon</span></h1>
+					<div class="main-container__content">
+						<div class="main-container__wrapper-content">
+							<h1 class="main-title main-title--product-page">Barket</h1>
+							<div class="article-counted clearfix">
+								<span class="article-counted__element">6 Item(s)</span>
+								<span class="article-counted__text">Show 
+									<select class="article-counted__selected" name="" id="">
+										<option value="">9</option>
+										<option value="">15</option>
+										<option value="">30</option>
+									</select>
+								</span>
+							</div>
+							<div class="article-counted article-counted--sort clearfix">
+								<span class="article-counted__element">
+									<span class="article-counted__element-grid js-show-grid js-active-btn-show-list"><i class="fas fa-th"></i></span>
+									<span class="article-counted__element-list js-show-list"><i class="fas fa-th-list"></i></span>
+								</span>
+								<span class="article-counted__text">Sort By
+									<select class="article-counted__selected article-counted__selected--text" name="" id="">
+										<option value="">Position</option>
+										<option value="">Name</option>
+										<option value="">Price</option>
+									</select>
+								</span>
+							</div>
+							<div class="product-content js-add-class-show-list clearfix">
+								<div class="product-content__items">
+									<div class="product clearfix">
+										<div class="product__image">
+											<a href="product.html" class="product__link-image">
+												<img src="images/2004_louis_roederer_brut_rose_1.png" alt="" class="product__picture">
+											</a>
+										</div>
+										<div class="product__description">
+											<h2 class="product__title">
+												<a href="product.html" class="product__link-title">2004 Louis Roederer Brut Rose</a>
+										    </h2>
+										    <p class="product__subtitle">We all know this good very well and m..</p>
+										    <p class="product__subtitle-blog">Well, it seems that those people who have invented process of wine-making couldn´t even guesswhat they had done - the drink appeared to be real nectar. Just remember how many different works of art were devoted to wine. It seems<br><br> that every artist of all times was admiring this drink. It gives inspiration and health, it has unique, unforgettable taste<br><br> and moreover it is totally natural. What could be better? It is a real bestseller; many facts prove that no other commodity has such a high rating. <a href="#" class="product__add-link">Learn More</a>
+										    </p>
+										    <span class="product__price">$123.20</span>
+										    <div class="product__btn product__btn--barket">
+										    	<button class="btn-addToCart">
+										    		<i class="fas fa-plus-circle btn-addToCart__icon"></i>Add to Cart
+										    	</button>
+										    	<button class="btn-detail"><a href="detail.html" class="btn-detail__link">detail</a></button>
+										    </div>
+										    <p class="product__add"><a href="#" class="product__add-link">Add to Wishlist</a></p>
+											<p class="product__add"><a href="#" class="product__add-link">Add to Cart</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="product-content__items">
+									<div class="product clearfix">
+										<div class="product__image">
+											<a href="product.html" class="product__link-image">
+												<img src="images/2009_pb_cabernetsauvignon_1.png" alt="" class="product__picture">
+											</a>
+										</div>
+										<div class="product__description">
+											<h2 class="product__title">
+												<a href="#" class="product__link-title">2009 PB CabernetSauvignon</a>
+										    </h2>
+										    <p class="product__subtitle">We all know this good very well and m..</p>
+										     <p class="product__subtitle-blog">Well, it seems that those people who have invented process of wine-making couldn´t even guesswhat they had done - the drink appeared to be real nectar. Just remember how many different works of art were devoted to wine. It seems<br><br> that every artist of all times was admiring this drink. It gives inspiration and health, it has unique, unforgettable taste<br><br> and moreover it is totally natural. What could be better? It is a real bestseller; many facts prove that no other commodity has such a high rating. <a href="#" class="product__add-link">Learn More</a>
+										    </p>
+										    <span class="product__price">$123.20</span>
+										    <div class="product__btn product__btn--barket">
+										    	<button class="btn-addToCart">
+										    		<i class="fas fa-plus-circle btn-addToCart__icon"></i>Add to Cart
+										    	</button>
+										    	<button class="btn-detail"><a href="detail.html" class="btn-detail__link">detail</a></button>
+										    </div>
+										    <p class="product__add"><a href="#" class="product__add-link">Add to Wishlist</a></p>
+											<p class="product__add"><a href="#" class="product__add-link">Add to Cart</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="product-content__items">
+									<div class="product clearfix">
+										<div class="product__image">
+											<a href="product.html" class="product__link-image">
+												<img src="images/2010_-_chateau_de_segries_tavel_rose_1.png" alt="" class="product__picture">
+											</a>
+										</div>
+										<div class="product__description">
+											<h2 class="product__title">
+												<a href="#" class="product__link-title">2010 - Chateau De Segries Tavel Rose</a>
+										    </h2>
+										    <p class="product__subtitle">We all know this good very well and m..</p>
+										     <p class="product__subtitle-blog">Well, it seems that those people who have invented process of wine-making couldn´t even guesswhat they had done - the drink appeared to be real nectar. Just remember how many different works of art were devoted to wine. It seems<br><br> that every artist of all times was admiring this drink. It gives inspiration and health, it has unique, unforgettable taste<br><br> and moreover it is totally natural. What could be better? It is a real bestseller; many facts prove that no other commodity has such a high rating. <a href="#" class="product__add-link">Learn More</a>
+										    </p>
+										    <span class="product__price">$123.20</span>
+										    <div class="product__btn product__btn--barket">
+										    	<button class="btn-addToCart">
+										    		<i class="fas fa-plus-circle btn-addToCart__icon"></i>Add to Cart
+										    	</button>
+										    	<button class="btn-detail"><a href="detail.html" class="btn-detail__link">detail</a></button>
+										    </div>
+										    <p class="product__add"><a href="#" class="product__add-link">Add to Wishlist</a></p>
+											<p class="product__add"><a href="#" class="product__add-link">Add to Cart</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="product-content__items">
+									<div class="product clearfix">
+										<div class="product__image">
+											<a href="product.html" class="product__link-image">
+												<img src="images/2010_onehope_california_chardonnay_1.png" alt="" class="product__picture">
+											</a>
+										</div>
+										<div class="product__description">
+											<h2 class="product__title">
+												<a href="#" class="product__link-title">2010 ONEHOPE California Chardonnay</a>
+										    </h2>
+										    <p class="product__subtitle">We all know this good very well and m..</p>
+										     <p class="product__subtitle-blog">Well, it seems that those people who have invented process of wine-making couldn´t even guesswhat they had done - the drink appeared to be real nectar. Just remember how many different works of art were devoted to wine. It seems<br><br> that every artist of all times was admiring this drink. It gives inspiration and health, it has unique, unforgettable taste<br><br> and moreover it is totally natural. What could be better? It is a real bestseller; many facts prove that no other commodity has such a high rating. <a href="#" class="product__add-link">Learn More</a>
+										    </p>
+										    <span class="product__price">$123.20</span>
+										    <div class="product__btn product__btn--barket">
+										    	<button class="btn-addToCart">
+										    		<i class="fas fa-plus-circle btn-addToCart__icon"></i>Add to Cart
+										    	</button>
+										    	<button class="btn-detail"><a href="detail.html" class="btn-detail__link">detail</a></button>
+										    </div>
+										    <p class="product__add"><a href="#" class="product__add-link">Add to Wishlist</a></p>
+										    <p class="product__add"><a href="#" class="product__add-link">Add to Cart</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="product-content__items">
+									<div class="product clearfix">
+										<div class="product__image">
+											<a href="product.html" class="product__link-image">
+												<img src="images/2011_onehope_california_sauvignon_blanc_1.png" alt="" class="product__picture">
+											</a>
+										</div>
+										<div class="product__description">
+											<h2 class="product__title">
+												<a href="#" class="product__link-title">2011 ONEHOPE California Sauvignon Blanc</a>
+										    </h2>
+										    <p class="product__subtitle">We all know this good very well and m..</p>
+										    <p class="product__subtitle-blog">Well, it seems that those people who have invented process of wine-making couldn´t even guesswhat they had done - the drink appeared to be real nectar. Just remember how many different works of art were devoted to wine. It seems<br><br> that every artist of all times was admiring this drink. It gives inspiration and health, it has unique, unforgettable taste<br><br> and moreover it is totally natural. What could be better? It is a real bestseller; many facts prove that no other commodity has such a high rating. <a href="#" class="product__add-link">Learn More</a>
+										    </p>
+										    <span class="product__price">$123.20</span>
+										    <div class="product__btn product__btn--barket">
+										    	<button class="btn-addToCart">
+										    		<i class="fas fa-plus-circle btn-addToCart__icon"></i>Add to Cart
+										    	</button>
+										    	<button class="btn-detail"><a href="detail.html" class="btn-detail__link">detail</a></button>
+										    </div>
+										    <p class="product__add"><a href="#" class="product__add-link">Add to Wishlist</a></p>
+											<p class="product__add"><a href="#" class="product__add-link">Add to Cart</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="product-content__items">
+									<div class="product clearfix">
+										<div class="product__image">
+											<a href="product.html" class="product__link-image">
+												<img src="images/cabernet_sauvignon_mendoza_argentina_1.png" alt="" class="product__picture">
+											</a>
+										</div>
+										<div class="product__description">
+											<h2 class="product__title">
+												<a href="#" class="product__link-title">Cabernet Sauvignon, Mendoza, Argentina</a>
+										    </h2>
+										    <p class="product__subtitle">We all know this good very well and m..</p>
+										     <p class="product__subtitle-blog">Well, it seems that those people who have invented process of wine-making couldn´t even guesswhat they had done - the drink appeared to be real nectar. Just remember how many different works of art were devoted to wine. It seems<br><br> that every artist of all times was admiring this drink. It gives inspiration and health, it has unique, unforgettable taste<br><br> and moreover it is totally natural. What could be better? It is a real bestseller; many facts prove that no other commodity has such a high rating. <a href="#" class="product__add-link">Learn More</a>
+										    </p>
+										    <span class="product__price">$123.20</span>
+										    <div class="product__btn product__btn--barket">
+										    	<button class="btn-addToCart">
+										    		<i class="fas fa-plus-circle btn-addToCart__icon"></i>Add to Cart
+										    	</button>
+										    	<button class="btn-detail"><a href="detail.html" class="btn-detail__link">detail</a></button>
+										    </div>
+										    <p class="product__add"><a href="#" class="product__add-link">Add to Wishlist</a></p>
+											<p class="product__add"><a href="#" class="product__add-link">Add to Cart</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="product-content__items">
+									<div class="product clearfix">
+										<div class="product__image">
+											<a href="product.html" class="product__link-image">
+												<img src="images/2009_pb_cabernetsauvignon_1.png" alt="" class="product__picture">
+											</a>
+										</div>
+										<div class="product__description">
+											<h2 class="product__title">
+												<a href="#" class="product__link-title">2004 Louis Roederer Brut Rose</a>
+										    </h2>
+										    <p class="product__subtitle">We all know this good very well and m..</p>
+										     <p class="product__subtitle-blog">Well, it seems that those people who have invented process of wine-making couldn´t even guesswhat they had done - the drink appeared to be real nectar. Just remember how many different works of art were devoted to wine. It seems<br><br> that every artist of all times was admiring this drink. It gives inspiration and health, it has unique, unforgettable taste<br><br> and moreover it is totally natural. What could be better? It is a real bestseller; many facts prove that no other commodity has such a high rating. <a href="#" class="product__add-link">Learn More</a>
+										    </p>
+										    <span class="product__price">$123.20</span>
+										    <div class="product__btn product__btn--barket">
+										    	<button class="btn-addToCart">
+										    		<i class="fas fa-plus-circle btn-addToCart__icon"></i>Add to Cart
+										    	</button>
+										    	<button class="btn-detail"><a href="detail.html" class="btn-detail__link">detail</a></button>
+										    </div>
+										    <p class="product__add"><a href="#" class="product__add-link">Add to Wishlist</a></p>
+											<p class="product__add"><a href="#" class="product__add-link">Add to Cart</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="article-counted clearfix">
+								<span class="article-counted__element">6 Item(s)</span>
+								<span class="article-counted__text">Show 
+									<select class="article-counted__selected" name="" id="">
+										<option value="">9</option>
+										<option value="">15</option>
+										<option value="">30</option>
+									</select>
+								</span>
+							</div>
+							<div class="article-counted article-counted--sort clearfix">
+								<span class="article-counted__element">
+									<span class="article-counted__element-grid js-show-grid js-active-btn-show-list"><i class="fas fa-th"></i></span>
+									<span class="article-counted__element-list js-show-list"><i class="fas fa-th-list"></i></span>
+								</span>
+								<span class="article-counted__text">Sort By
+									<select class="article-counted__selected article-counted__selected--text" name="" id="">
+										<option value="">Position</option>
+										<option value="">Name</option>
+										<option value="">Price</option>
+									</select>
+								</span>
+							</div>	
+						</div>
+					</div>
+					<div class="main-container__right-side">
+						<div class="main-container__wrapper-right-side">
+							<div class="product-blog">
+								<h2 class="block-title block-title--mobile-hidden block-title--recently-viewed js-block-title">
+									Related Products 
+									<span class="icon-toggle">
+										<i class="fas fa-plus icon-toggle__icons-plus js-visible"></i><i class="fas fa-minus icon-toggle__icons-minus"></i>
+									</span>
+							    </h2>
+							     <div class="special-products js-block-container">
+							    	<div class="special-products__items">
+							    		<div class="product clearfix">
+											<div class="product__image product__image--special product__image--related-product">
+												<a href="product.html" class="product__link-image">
+													<img src="images/grand_cru_limited_edition_giorgio_g_cognac_1.png" alt="" class="product__picture product__picture--special">
+												</a>
+											</div>
+											<div class="product__description product__description--special product__description--related-product">
+												<h2 class="product__title product__title--related product__title--special">
+													<a href="#" class="product__link-title">Grande Premier Cru Giorgio G Cognac</a>
+											    </h2>
+											    <span class="product__price product__price--related-product">$123.20</span>
+											    <p class="product__add"><a href="#" class="product__add-link">Add to Wishlist</a></p>
+											    <p class="product__add"><a href="#" class="product__add-link">Add to Cart</a></p>
+											   
+											</div>
+										</div>
+									</div>
+									<div class="special-products__items">
+							    		<div class="product clearfix">
+											<div class="product__image product__image--special product__image--related-product">
+												<a href="product.html" class="product__link-image">
+													<img src="images/grande_premier_cru_giorgio_g_cognac_1.png" alt="" class="product__picture product__picture--special">
+												</a>
+											</div>
+											<div class="product__description product__description--special product__description--related-product">
+												<h2 class="product__title product__title--related product__title--special">
+													<a href="#" class="product__link-title">OG XO Brandy</a>
+											    </h2>
+											    <span class="product__price product__price--related-product">$123.20</span>
+											    <p class="product__add"><a href="#" class="product__add-link">Add to Wishlist</a></p>
+											    <p class="product__add"><a href="#" class="product__add-link">Add to Cart</a></p>
+											</div>
+										</div>
+									</div>
+									<div class="special-products__items">
+							    		<div class="product clearfix">
+											<div class="product__image product__image--special product__image--related-product">
+												<a href="product.html" class="product__link-image">
+													<img src="images/grande_premier_cru_giorgio_g_cognac_1.png" alt="" class="product__picture product__picture--special">
+												</a>
+											</div>
+											<div class="product__description product__description--special product__description--related-product">
+												<h2 class="product__title product__title--related product__title--special">
+													<a href="#" class="product__link-title">GRAND CRU Limited Edition Giorgio G Cognac</a>
+											    </h2>
+											    <span class="product__price product__price--related-product">$123.20</span>
+											    <p class="product__add"><a href="#" class="product__add-link">Add to Wishlist</a></p>
+											    <p class="product__add"><a href="#" class="product__add-link">Add to Cart</a></p>
+											</div>
+										</div>
+									</div>
+							    </div>
+							</div>    
+						    <div class="product-blog">
+						        <h2 class="block-title block-title--mobile-hidden block-title--recently-viewed js-block-title">
+	   								My Cart 
+	   								<span class="icon-toggle">
+	   									<i class="fas fa-plus icon-toggle__icons-plus js-visible"></i><i class="fas fa-minus icon-toggle__icons-minus"></i>
+	   								</span>
+	   						    </h2>
+	   						    <p class="subtitle-item js-block-container">You have no items in your shopping cart.</p>
+	   						</div>
+						    <div class="product-blog">
+						    	<h2 class="block-title block-title--mobile-hidden block-title--recently-viewed js-block-title">
+    								Compare Products 
+    								<span class="icon-toggle">
+    									<i class="fas fa-plus icon-toggle__icons-plus js-visible"></i><i class="fas fa-minus icon-toggle__icons-minus"></i>
+    								</span>
+    						    </h2>
+    						    <p class="subtitle-item js-block-container">You have no items to compare.</p>
+    						</div>
+						    <div class="product-blog">
+						    	<h2 class="block-title block-title--mobile-hidden block-title--recently-viewed js-block-title">
+    								Popular Tags
+    								<span class="icon-toggle">
+										<i class="fas fa-plus icon-toggle__icons-plus js-visible"></i><i class="fas fa-minus icon-toggle__icons-minus"></i>
+									</span>
+    						    </h2>
+    						     <p class="subtitle-item js-block-container">You have no items to compare.</p>
+    						</div>
+						    <div class="product-blog">
+						    	<h2 class="block-title block-title--mobile-hidden block-title--recently-viewed js-block-title">
+    								Community Poll
+    								<span class="icon-toggle">
+    									<i class="fas fa-plus icon-toggle__icons-plus js-visible"></i><i class="fas fa-minus icon-toggle__icons-minus"></i>
+    								</span>
+    						    </h2>
+							    <div class="nav-community js-block-container">
+							    	 <p class="subtitle-item subtitle-item--community">What is the main reason for you to purchase products online?</p>
+							    	<ul class="community">
+							    		<li class="community__item">
+							    			<input class="community__radio-btn" type="radio" name="radio-check" id="r1">
+							    			<label class="community__element" for="r1">More convenient shipping and delivery</label>
+							    		</li>
+							    		<li class="community__item">
+							    			<input class="community__radio-btn" type="radio" name="radio-check" id="r2">
+							    			<label class="community__element" for="r2">Lower price</label>
+							    		</li>
+							    		<li class="community__item">
+							    			<input class="community__radio-btn" type="radio" name="radio-check" id="r3">
+							    			<label class="community__element" for="r3">Bigger choice</label>
+							    		</li>
+							    		<li class="community__item">
+							    			<input class="community__radio-btn" type="radio" name="radio-check" id="r4">
+							    			<label class="community__element" for="r4">Centralized product search procedure</label>
+							    		</li>
+							    		<li class="community__item">
+							    			<input class="community__radio-btn" type="radio" name="radio-check" id="r5">
+							    			<label class="community__element" for="r5">Payments security</label>
+							    		</li>
+							    		<li class="community__item">
+							    			<input class="community__radio-btn" type="radio" name="radio-check" id="r6">
+							    			<label class="community__element" for="r6">30-day Money Back Guarantee</label>
+							    		</li>
+							    		<li class="community__item">
+							    			<input class="community__radio-btn" type="radio" name="radio-check" id="r7">
+							    			<label class="community__element" for="r7">Other.</label>
+							    		</li>
+							    		<li class="community__item">
+							    			<input class="community__radio-btn" type="radio" name="radio-check" id="r8">
+							    			<label class="community__element" for="r8">Vote</label>
+							    		</li>
+							    	</ul>
+							    	<button class="btn-addToCart">vote</button>	
+							    </div>
+						    </div>	
+						</div>				
+					</div>
+				</div>
+			</div>
+			<div class="footer clearfix">
+				<div class="footer__wrapper">
+					<div class="footer__items">
+						<ul class="nav-footer">
+							<li class="nav-footer__header">
+								<h4 class="nav-footer__title js-block-title-footer">Information
+									<span class="icon-toggle">
+										<i class="fas fa-plus icon-toggle__icons-plus js-visible"></i><i class="fas fa-minus icon-toggle__icons-minus"></i>
+									</span>
+								</h4>
+								<ul class="nav-footer__sub-list js-block-container-footer">
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">About Us</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Customer Service</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Template Settings</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Privacy Policy</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Site Map</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Search Terms</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Advanced Search</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Orders and Returns</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Contact Us</a></li>
+							    </ul>
+						    </li>
+						</ul>    
+					</div>
+					<div class="footer__items">
+						<ul class="nav-footer">
+							<li class="nav-footer__header">
+								<h4 class="nav-footer__title js-block-title-footer">Why buy from us
+									<span class="icon-toggle">
+										<i class="fas fa-plus icon-toggle__icons-plus js-visible"></i><i class="fas fa-minus icon-toggle__icons-minus"></i>
+									</span>
+								</h4>
+								<ul class="nav-footer__sub-list js-block-container-footer">
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Shipping & Returns</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Secure Shopping</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">International Shipping</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Affiliates</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Group Sales</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__items">
+						<ul class="nav-footer">
+							<li class="nav-footer__header">
+								<h4 class="nav-footer__title js-block-title-footer">My account
+									<span class="icon-toggle">
+										<i class="fas fa-plus icon-toggle__icons-plus js-visible"></i><i class="fas fa-minus icon-toggle__icons-minus"></i>
+									</span>
+								</h4>
+								<ul class="nav-footer__sub-list js-block-container-footer">
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Sign In</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">View Cart</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">My Wishlist</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Track My Order</a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link">Help</a></li>
+								</ul>
+							</li>		
+						</ul>
+					</div>
+					<div class="footer__items">
+						<ul class="nav-footer">
+							<li class="nav-footer__header">
+								<h4 class="nav-footer__title js-block-title-footer">Contacts
+									<span class="icon-toggle">
+										<i class="fas fa-plus icon-toggle__icons-plus js-visible"></i><i class="fas fa-minus icon-toggle__icons-minus"></i>
+									</span>
+								</h4>
+								<ul class="nav-footer__sub-list js-block-container-footer">
+									<li class="nav-footer__items nav-footer__items--contact"><i class="fas fa-map-marker nav-footer__contact-icon"></i>Company Inc., 8901 Marmora Road, Glasgow, D04 89GR></li>
+									<li class="nav-footer__items nav-footer__items--contact"> <i class="fas fa-phone nav-footer__contact-icon"></i>Call us now toll free: (800)2345-6789</li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link"></a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link"></a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link"></a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link"></a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link"></a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link"></a></li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link"></a></li>
+								</ul>
+							</li>		
+						</ul>
+					</div>
+					<div class="footer__items footer__items--last">
+						<ul class="nav-footer">
+							<li class="nav-footer__header">
+								<h4 class="nav-footer__title nav-footer__title--last">Newsletter
+									<!-- <span class="icon-toggle">
+										<i class="fas fa-plus icon-toggle__icons-plus"></i><i class="fas fa-minus icon-toggle__icons-minus"></i>
+									</span> -->
+								</h4>
+								<ul class="nav-footer__sub-list nav-footer__sub-list--last">
+									<li class="nav-footer__items">
+									   <form action="" class="search search--footer">
+											<input class="search__text search__text--footer" type="text">
+											<button class="search__btn search__btn--footer" type="submit"><i class="fas fa-angle-right search__fa-search"></i></button>
+									   </form>
+									</li>
+									<li class="nav-footer__items nav-footer__items--follow">Follow us
+										<a href="#" class="nav-footer__link"><i class="fab nav-footer__fab-icon  fa-twitter"></i></a>
+										<a href="#" class="nav-footer__link"><i class="fab nav-footer__fab-icon  fa-facebook-f"></i></a>
+										<a href="#" class="nav-footer__link"><i class="fab nav-footer__fab-icon  fa-twitter"></i></a>
+									</li>
+									<li class="nav-footer__items nav-footer__items--news">© 2018 wine Store. All Rights Reserved.</li>
+									<li class="nav-footer__items">
+										<a href="#" class="nav-footer__link"><img src="images/bnr_nowAccepting_150x60.gif" alt=""></a>
+									</li>
+									<li class="nav-footer__items"><a href="#" class="nav-footer__link"></a></li>
+								</ul>
+							</li>	
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript' src='js/jquery-3.2.1.min.js'></script>
+	<!-- <script type="text/javascript" src="js/jquery.bxslider.js"></script> -->
+<!-- 	<script type="text/javascript" src="js/jquery.mobile.customized.min.js"></script> -->
+	<!-- <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> -->
+	<script type="text/javascript" src="js/camera.js"></script>
+    <script type='text/javascript' src='js/script.js'></script>
+</body>
+</html>
