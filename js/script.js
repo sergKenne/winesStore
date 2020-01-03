@@ -61,7 +61,8 @@ $(".line-lang__sublist-toggle").click(function() {
 
 
 
-if( windowWidth > 768 ) {
+//if( windowWidth > 768 ) {
+if( windowWidth > 1024 ) {
 
     $('#sub-list-hover').hover(
         function () {
