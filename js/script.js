@@ -19,12 +19,12 @@ jQuery('#camera_wrap').camera({
 //     location.reload();
 // });
 
-window.addEventListener('resize', function () {
-  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-  if (viewportWidth < 1025) {
-    location.reload();
-  }
-}, false);
+// window.addEventListener('resize', function () {
+//   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+//   if (viewportWidth < 1025) {
+//     location.reload();
+//   }
+// }, false);
 
 //nav-mobile bar menu
 
